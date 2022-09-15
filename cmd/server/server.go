@@ -4,7 +4,8 @@ import (
 	"log"
 	"net"
 
-	"google.golang.org/services"
+	"github.com/mauricioruviaro/gRPC-with-go/services"
+	"github.com/mauricioruviaro/gRPC-with-go/pb"
 	"google.golang.org/grpc"
 )
 

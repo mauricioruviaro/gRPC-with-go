@@ -7,17 +7,17 @@ import (
 	"github.com/mauricioruviaro/gRPC-with-go/pb"
 )
 
-type UserServiceServer interface {
-	AddUser(context.Context, *User) (*User, error)
-	mustEmbedUnimplementedUserServiceServer()
-}
+// type UserServiceServer interface {
+// 	AddUser(context.Context, *User) (*User, error)
+// 	mustEmbedUnimplementedUserServiceServer()
+// }
 
 type UserService struct {
 	pb.UnimplementedUserServiceServer
 }
 
 func NewUserService() *UserService {
-	return &userService{}
+	return &UserService{}
 }
 
 func (*UserService) AddUser(ctx context.Context, req *pb.User) (*pb.User, error) {
